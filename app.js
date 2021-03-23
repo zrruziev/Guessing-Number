@@ -17,7 +17,7 @@ const guessInput = document.querySelector('#guess'),
 btn.addEventListener('click', function() {
   let guess = parseInt(guessInput.value);
   guessInput.value = '';
-  if(isNaN(guess) || guess < min || guess > max) {
+  if(btn.className !== 'play-again' && (isNaN(guess) || guess < min || guess > max)) {
     emoji.innerHTML = '🤔';
     result.innerHTML =`Please enter a number between ${min} and ${max}`;
     result.style.color = 'rgb(253, 59, 0)';
