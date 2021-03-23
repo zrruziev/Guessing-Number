@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(100, 100, 100);
+  font-family: cursive;  
+  background-color: rgb(231, 248, 255);
+}
+h1 {
+  padding-bottom: 20px;
+  width: 420px;
+  letter-spacing: 2px;
+  font-size: 300%;
+  color: rgb(253, 59, 0);
+}
+#info {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#result {
+  width: 450px;
+  font-size: 24px;
+}
+#emoji {
+  padding: 0;
+  margin: 15px 0 0 0;
+  font-size: 60px;
+}
+h1, p {
+  margin: auto;
+  text-align: center;
+}
+.main {
+  width: 750px;
+  margin: 20vh auto;
+}
+.container {
+ text-align: center;
+}
+#btn, #guess {
+  font-family: cursive; 
+  font-size: 24px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#guess {
+  padding: 21px 10px;
+  background-color: rgb(246, 255, 255);
+  border: .5px solid grey;
+  width: 220px;
+  margin-right: 10px;
+}
+#guess:focus {
+  background-color: rgb(250, 255, 255);
+  box-shadow: 1px 1px 5px rgb(139, 139, 139);
+}
+#btn {
+  background-color: rgb(2, 209, 95);
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: -1px;
+  box-shadow: 1px 3px 7px rgb(139, 139, 139);
+  padding: 20px 40px;
+}
+#btn:active {
+  top: 0;
+  box-shadow: .5px 1px 6px rgb(139, 139, 139);
+}
+/* For Phone size */
+@media (max-width:600px) {
+  .main {
+    line-height: 40px;
+    width: 200px;
+    margin-top: 5vh;
+  }
+  h1, p{
+    width: 200px;
+  }
+  #emoji, #result{
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  #guess, #btn {
+    position: relative;
+    left: -17px;
+    text-align: center;
+    width: 200px;
+    margin: 10px auto;
+  }
+  #btn {
+    margin-left: 16px;
+  }
+}
