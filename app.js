@@ -22,14 +22,14 @@ btn.addEventListener('click', function() {
     result.innerHTML =`Please enter a number between ${min} and ${max}`;
     result.style.color = 'rgb(253, 59, 0)';
     setTimeout(function() {
-      if(emoji.innerHTML == '🤔') {
+      if(emoji.innerHTML === '🤔') {
         emoji.innerHTML = '';
         result.innerHTML = '';
       }
     }, 2500);
   } 
   else {
-    if(guess == winNumber) {
+    if(guess === winNumber) {
       guessInput.disabled = true;
       bodyresult.style.backgroundColor = 'rgb(194, 253, 224)';
       guessInput.placeholder = 'Good Job';
@@ -46,7 +46,7 @@ btn.addEventListener('click', function() {
       result.style.color = 'red';
       bodyresult.style.backgroundColor = 'rgb(255, 233, 233)';
       setTimeout(function() {
-        if(guessesLeft != 0) {
+        if(guessesLeft !== 0) {
           emoji.innerHTML = '';
           result.innerHTML = '';
           bodyresult.style.backgroundColor = 'rgb(241, 254, 255)';
@@ -71,7 +71,7 @@ btn.addEventListener('click', function() {
 
 btn.addEventListener('mousedown', function(e) {
   console.log(e.target)
-  if(e.target.className == 'play-again') {
+  if(e.target.className === 'play-again') {
     window.location.reload();
   }
   e.preventDefault()
