@@ -13,14 +13,6 @@ const guessInput = document.querySelector('#guess'),
       bodyresult = document.querySelector('body'),
       reloader = document.querySelector('.input-area');
 
-btn.addEventListener('mousedown', function(e) {
-  console.log(e.target)
-  if(e.target.className == 'play-again') {
-    window.location.reload();
-  }
-  e.preventDefault()
-});
-
 // Listen to the event
 btn.addEventListener('click', function() {
   let guess = parseInt(guessInput.value);
@@ -75,6 +67,14 @@ btn.addEventListener('click', function() {
       }
     }
   }
+});
+
+btn.addEventListener('mousedown', function(e) {
+  console.log(e.target)
+  if(e.target.className == 'play-again') {
+    window.location.reload();
+  }
+  e.preventDefault()
 });
 
 
