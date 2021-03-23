@@ -64,9 +64,6 @@ h1, p {
   box-shadow: 1px 3px 7px rgb(139, 139, 139);
   padding: 20px 40px;
 }
-#btn:focus {
-  outline: none;
-}
 #btn:active {
   top: 0;
   box-shadow: .5px 1px 6px rgb(139, 139, 139);

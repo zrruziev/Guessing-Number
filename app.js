@@ -13,11 +13,12 @@ const guessInput = document.querySelector('#guess'),
       bodyresult = document.querySelector('body'),
       reloader = document.querySelector('.input-area');
 
-reloader.addEventListener('mousedown', function(e) {
+btn.addEventListener('mousedown', function(e) {
+  console.log(e.target)
   if(e.target.className == 'play-again') {
     window.location.reload();
-    e.preventDefault();
   }
+  e.preventDefault()
 });
 
 // Listen to the event
