@@ -17,6 +17,7 @@ reloader.addEventListener('mousedown', function(e) {
   if(e.target.className == 'play-again') {
     window.location.reload();
   }
+  e.preventDefault();
 });
 
 // Listen to the event
