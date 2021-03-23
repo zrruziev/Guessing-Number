@@ -13,6 +13,14 @@ const guessInput = document.querySelector('#guess'),
       bodyresult = document.querySelector('body'),
       reloader = document.querySelector('.input-area');
 
+btn.addEventListener('mousedown', function(e) {
+  console.log(e.target)
+  if(e.target.className === 'play-again') {
+    window.location.reload();
+  }
+  e.preventDefault();
+});
+
 // Listen to the event
 btn.addEventListener('click', function() {
   let guess = parseInt(guessInput.value);
@@ -38,7 +46,7 @@ btn.addEventListener('click', function() {
       btn.value = 'Play Again';
       btn.className += 'play-again';
     } 
-    else {
+    else if(btn.className !== 'play-again') {
       guessesLeft -= 1;
       guessInput.placeholder = `${guessesLeft} try left`;
       emoji.innerHTML = '😔';
@@ -67,14 +75,6 @@ btn.addEventListener('click', function() {
       }
     }
   }
-});
-
-btn.addEventListener('mousedown', function(e) {
-  console.log(e.target)
-  if(e.target.className === 'play-again') {
-    window.location.reload();
-  }
-  e.preventDefault()
 });
 
 
