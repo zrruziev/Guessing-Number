@@ -13,8 +13,8 @@ const guessInput = document.querySelector('#guess'),
       bodyresult = document.querySelector('body'),
       reloader = document.querySelector('.input-area');
 
+// Play Again State
 btn.addEventListener('mousedown', function(e) {
-  console.log(e.target)
   if(e.target.className === 'play-again') {
     window.location.reload();
   }
@@ -39,6 +39,7 @@ btn.addEventListener('click', function() {
   else {
     if(guess === winNumber) {
       guessInput.disabled = true;
+      guessInput.style.cursor = 'not-allowed';
       bodyresult.style.backgroundColor = 'rgb(194, 253, 224)';
       guessInput.placeholder = 'Good Job';
       emoji.innerHTML = '🏆';
