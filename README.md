@@ -2,4 +2,4 @@
 * Gues a number between 1 - 10 
 
 * Showcase 
-<img width=200px src="showcase.gif">
+<img width=400px src="showcase.gif">
